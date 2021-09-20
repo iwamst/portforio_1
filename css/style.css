@@ -10,14 +10,27 @@ body{
     font-size: 16px;
 }
 
-h1{
-font-size: 36px;
-}
-h2{
-    font-size: 24px;
-}
+
 
 footer{
+    height:120px;
     background-color: #8f3940;
     color: #f4f4f4;
+    text-align: center;
+}
+
+
+
+/*過去ソースから取得*/
+#boxE{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    background-color: #efefef;
+    transition: ease 0.3s;
+}
+
+#boxE:hover{
+    transition: ease 0.8s;
+    box-shadow: 2px 2px 6px #555;
 }
