@@ -5,20 +5,117 @@
 }
 
 body{
+    font-family:"Noto Sans Japanese",sans-serif;
     background-color: #f4f4f4;
     color: #1c1d1f;
     font-size: 16px;
 }
-
-
 
 footer{
     height:120px;
     background-color: #8f3940;
     color: #f4f4f4;
     text-align: center;
+    font-size: 13px;
+}
+@media screen and (max-width: 768px){
+    body{
+        font-size: 20px;
+    }
+    footer{
+        font-size: 20px;
+    }
 }
 
+/* メニュー部分 */
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check:checked ~ .menu-content {
+    right: 0;/*メニューを画面内へ*/
+}
+    
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #8f3940;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+
+.menu-content {
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -40%;
+    z-index: 10;
+    background-color: #8f3940da ;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+    text-align: center;
+}
+.menu-content ul li {
+    
+    margin: 30px 0px;
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+/* ！ヘッダーのメニュー部分 */
 
 
 /*過去ソースから取得*/
@@ -33,4 +130,15 @@ footer{
 #boxE:hover{
     transition: ease 0.8s;
     box-shadow: 2px 2px 6px #555;
+}
+
+
+
+/* SP対応 */
+@media screen and (max-width:768px) {
+    
+.menu-content {
+    width: 100%;
+    right: -100%;
+}
 }

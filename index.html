@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
     <link rel="icon" type="image/x-icon" href="img/MST_32.png">
     <link rel="stylesheet" href="css/top.css">
@@ -15,26 +15,51 @@
 
 <body>
     <header>
-
+        <nav>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="#">Top</a>
+                        </li>
+                        <li>
+                            <a href="#">Works</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+        </nav>
     </header>
     <main>
         <div id="mainContents">
 
             <section id="top" class="sectionMargin">
                 <div class="topCts">
-                    <img src="img/MST_red.png" alt="MST logo" width="543px">
+                    <img src="img/MST_red.png" alt="MST logo">
                     <h1>IWANAGA MASATO</h1>
-                    <div class="scrolldown2"><span>Scroll</span></div>
+                    <div class="scroll"><span></span></div>
                 </div>
 
             </section>
 
             <section id="works" class="sectionMargin">
-                <h2>Works</h2>
+                <div class="h2Block">
+                    <h2>Works</h2>
+                </div>
                 <div class="worksCts">
                     <div class="gridWrap">
-                        <div class="g1">1</div>
-                        <div class="g2">2</div>
+                        <div class="g1">
+                            <img src="img/P001_top.jpg" alt="saytag">
+                        </div>
+                        <div class="g2"> <img src="img/P001_top.jpg" alt="saytag">
+                        </div>
                         <div class="g1">3</div>
                         <div class="g2">4</div>
                         <div class="g1">1</div>
@@ -46,79 +71,48 @@
             </section>
 
             <section id="about" class="sectionMargin">
-                <h2>About</h2>
+                <div class="h2Block">
+                    <h2>About</h2>
+                </div>
+
                 <div>
                     <div>
-                        <ul>
-                            <li><img src="img/prof_mst.png" alt="IwanagaMasato"></li>
-                            <li><p>
-                                Iwanaga Masato
-                            </p>
-                            <p>
-                                26歳　神奈川県出身
-                            </p>
-                            <table>
-                                <tr>
-                                    <td>2011.04-2014.03</td>
-                                    <td>神奈川県立多摩高等学校</td>
-                                </tr>
-                                <tr>
-                                    <td>2014.04-2018.03</td>
-                                    <td>明治大学総合数理学部先端メディアサイエンス学科</td>
-                                </tr>
-                                <tr>
-                                    <td>2020.04-2021.05</td>
-                                    <td>デジタルハリウッド 本科UI/UXD専攻</td>
-                                </tr>
-                                <tr>
-                                    <td>2018.04- </td>
-                                    <td>SBテクノロジー株式会社</td>
-                                </tr>
-                            </table></li>
+                        <ul class="aboutCts">
+                            <li>
+                                <img src="img/prof_mst.png" alt="IwanagaMasato" width="244px">
+                            </li>
+                            <li>
+                                <p>
+                                    Iwanaga Masato
+                                </p>
+                                <p>
+                                    26歳　神奈川県出身
+                                </p>
+                                <table>
+                                    <tr>
+                                        <td>2011.04-2014.03</td>
+                                        <td>神奈川県立多摩高等学校</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014.04-2018.03</td>
+                                        <td>明治大学総合数理学部先端メディアサイエンス学科</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.04-2021.05</td>
+                                        <td>デジタルハリウッド 本科UI/UXD専攻</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018.04- </td>
+                                        <td>SBテクノロジー株式会社</td>
+                                    </tr>
+                                </table>
+                            </li>
                         </ul>
 
+                    </div>
 
-                    </div>
-                    <div>
-                        <span>
-                            <img src="img/prof_mst.png" alt="IwanagaMasato">
-                        </span>
-                        <span>
-                            <p>
-                                Iwanaga Masato
-                            </p>
-                            <p>
-                                26歳　神奈川県出身
-                            </p>
-                            <table>
-                                <tr>
-                                    <td>2011.04-2014.03</td>
-                                    <td>神奈川県立多摩高等学校</td>
-                                </tr>
-                                <tr>
-                                    <td>2014.04-2018.03</td>
-                                    <td>明治大学総合数理学部先端メディアサイエンス学科</td>
-                                </tr>
-                                <tr>
-                                    <td>2020.04-2021.05</td>
-                                    <td>デジタルハリウッド 本科UI/UXD専攻</td>
-                                </tr>
-                                <tr>
-                                    <td>2018.04- </td>
-                                    <td>SBテクノロジー株式会社</td>
-                                </tr>
-                            </table>
-                        </span>
-                        <p>趣味はカラオケとかコーヒーとか服とか。なんでも割と興味持ちます。</p>
-                    </div>
-                </div>
             </section>
 
-            <section id="sideNav">
-                <p>Works</p>
-                <p>About</p>
-                <p>Contact</p>
-            </section>
         </div><!-- mainContents -->
 
     </main>

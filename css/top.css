@@ -1,66 +1,205 @@
 @charset "utf-8";
-h1{
+h1 {
+    font-family: din-2014, 'Arial Narrow Bold', sans-serif;
     font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
     color: #978586;
     text-align: center;
-    }
+    margin: 30px 0;
+}
 
-    h2{
-        font-size: 24px;
-        color: #707070;
-        text-align: center;
-    }
+h2 {
+    width: 180px;
+    font-size: 24px;
+    color: #707070;
+    display: inline-block;
 
-    #mainContents{
-        margin-left: 5%;
-        margin-right: 5%;
-        background-color: #7ba07b;
-/*
+    padding-bottom: .2em;
+    border-bottom: 3px solid #8f3940;
+}
+
+.h2Block {
+    text-align: center;
+}
+
+#mainContents {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #7ba07b;
+    /*
         background-color: #efefef;
 */
-    }
+}
 
-    #top{
+#top {
+    width: 100%;
+    height: 100vh;
+    background-color: #b1bb9a;
+}
+
+#works {
+    background-color: #978586;
+}
+
+#sideNav{
+    background-color: #8f3940;
+    color: #fafafa;
+    text-align: center;
+}
+
+
+.topCts {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+   
+    text-align: center;
+}
+
+.topCts img{
+    padding-bottom: 50px;
+    width: 41vw;
+}
+
+.worksCts{
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.aboutCts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    list-style: none;
+    margin-top: 30px;
+}
+
+.aboutCts li {
+    
+    background-color: beige;
+}
+.aboutCts li img{
+    margin-left: 5%;
+
+    text-align: center;
+}
+
+
+
+/* SP対応 */
+@media screen and (max-width:768px) {
+    
+    .topCts img{
+        padding-bottom: 50px;
         width: 100%;
-        height: 100vh;
-        background-color: #b1bb9a;
     }
-    #works{
-        background-color: #978586;
+    
+    .aboutCts{
+        display: block;
+        padding: 30px 0;
+
     }
-    .topCts{
+    .aboutCts li {
+        width: 100%;
         text-align: center;
+        overflow: hidden;
+        text-align: left;
+    }
+    .aboutCts li img{
+        margin: auto;
     }
 
-    .sectionMargin{
-        margin-bottom: 100px;
+}
+/* ! SP対応 */
+
+
+.sectionMargin {
+    margin-bottom: 100px;
+}
+
+.gridWrap {
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+
+.g1 {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    transition: ease 0.3s;
+}
+
+.g1 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.g2 {
+    width: 200px;
+    height: 200px;
+    background-color: goldenrod;
+    border-radius: 10px;
+    transition: ease 0.3s;
+}
+
+.g2 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.g1:hover {
+    box-shadow: 2px 2px 6px #777;
+    filter: brightness(105%);
+}
+
+.g2:hover {
+    box-shadow: 2px 2px 6px #777;
+    filter: brightness(105%);
+}
+
+.scroll {
+    display: inline-block;
+    padding-top: 75px;
+    position: relative;
+}
+
+.scroll::before {
+    animation: scroll 3.5s infinite;
+    border: solid #707070;
+    border-width: 0 0 1px 1px;
+    content: "";
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
     }
-    
-    .gridWrap{
-     margin:0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-        grid-gap: 40px;
+    80% {
+        transform: rotate(-45deg) translate(-30px, 30px);
     }
-    .g1{
-        width: 200px;
-        height: 200px;
-        background-color: antiquewhite;
-        border-radius: 10px; 
-        transition: ease 0.3s;
+    0%, 80%, 100% {
+        opacity: 0;
     }
-    .g2{
-        width: 200px;
-        height: 200px;
-        background-color: goldenrod;
-        border-radius: 10px;  
-        transition: ease 0.3s;
+    40% {
+        opacity: 1;
     }
-    
-    .g1:hover{
-        box-shadow: 2px 2px 6px #777;
-    }
-    
-    .g2:hover{
-        box-shadow: 2px 2px 6px #777;
-    }
+}

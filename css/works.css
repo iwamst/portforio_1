@@ -14,3 +14,39 @@ footer{
     background-color: #8f3940;
     color: #f4f4f4;
 }
+
+h1{
+
+    font-size: 36px;
+    color: #707070;
+    width: 50vw;
+    padding-bottom: .2em;
+    border-bottom: 3px solid #8f3940;
+}
+
+
+#mainContents {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #aba07b;
+}
+.h1div{
+    border-bottom: #8f3940;
+}
+
+.explain{
+    padding: 50px 20px;
+}
+.backBtnDiv{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.fixed_btn
+{
+    border-radius: 20;
+  border: none;
+  bottom: 10px; 
+  right: 10px;
+  padding: 6px 40px;
+}
+
