@@ -19,7 +19,12 @@ h2 {
     border-bottom: 3px solid #8f3940;
 }
 
+td{
+    padding: 8px 4px;
+}
+
 .h2Block {
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -72,48 +77,31 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     list-style: none;
     margin-top: 30px;
 }
 
 .aboutCts li {
-    
     background-color: beige;
 }
 .aboutCts li img{
-    margin-left: 5%;
+}
 
+.aboutLeft{
+    width: 40vw;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.aboutRight{
+width: 60vw;
+margin-bottom: 40px;
+}
+.aboutRight p{
     text-align: center;
 }
-
-
-
-/* SP対応 */
-@media screen and (max-width:768px) {
-    
-    .topCts img{
-        padding-bottom: 50px;
-        width: 100%;
-    }
-    
-    .aboutCts{
-        display: block;
-        padding: 30px 0;
-
-    }
-    .aboutCts li {
-        width: 100%;
-        text-align: center;
-        overflow: hidden;
-        text-align: left;
-    }
-    .aboutCts li img{
-        margin: auto;
-    }
-
+.aboutRight p{
+    padding-bottom: 15px ;
 }
-/* ! SP対応 */
 
 
 .sectionMargin {
@@ -158,13 +146,13 @@ h2 {
 }
 
 .g1:hover {
-    box-shadow: 2px 2px 6px #777;
-    filter: brightness(105%);
+    box-shadow: 2px 2px 6px #555;
+    filter: brightness(115%);
 }
 
 .g2:hover {
-    box-shadow: 2px 2px 6px #777;
-    filter: brightness(105%);
+    box-shadow: 2px 2px 6px #555;
+    filter: brightness(115%);
 }
 
 .scroll {
@@ -188,6 +176,73 @@ h2 {
     width: 20px;
     height: 20px;
 }
+
+
+/* SP対応 */
+@media screen and (max-width:768px) {
+    
+    .topCts img{
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    
+    .aboutCts{
+        text-align: center;
+        display: block;
+        padding: 30px 0;
+
+    }
+    .aboutCts li {
+        width: 100%;
+        overflow: hidden;
+    }
+    .aboutLeft{
+        text-align: center;
+    }
+    .aboutRight{
+        text-align: left;
+    }
+
+    .gridWrap {
+        margin: 0 auto;
+        margin-left: 12px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 20px;
+    }
+    
+
+    .g1 {
+        width: 150px;
+        height: 150px;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        transition: ease 0.3s;
+    }
+    
+    .g1 img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .g2 {
+        width: 150px;
+        height: 150px;
+        background-color: goldenrod;
+        border-radius: 10px;
+        transition: ease 0.3s;
+    }
+    
+    .g2 img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+}
+/* ! SP対応 */
+
 
 @keyframes scroll {
     0% {

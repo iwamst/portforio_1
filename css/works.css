@@ -16,18 +16,22 @@ footer{
 }
 
 h1{
-
     font-size: 36px;
     color: #707070;
-    width: 50vw;
-    padding-bottom: .2em;
+    width: 55vw;
+    padding-bottom: .5em;
     border-bottom: 3px solid #8f3940;
 }
-
+header{
+    text-align: center;
+}
+header img{
+    margin: 10px 0;
+    height: 25px;
+}
 
 #mainContents {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 40px 5%;
     background-color: #aba07b;
 }
 .h1div{
@@ -36,6 +40,18 @@ h1{
 
 .explain{
     padding: 50px 20px;
+}
+
+.expImg{
+    text-align: center;
+
+
+}
+.expImg img{
+    width: 100%;
+}
+.expTxt{
+    margin: 30px 0;
 }
 .backBtnDiv{
     text-align: center;
@@ -50,3 +66,12 @@ h1{
   padding: 6px 40px;
 }
 
+@media screen and (max-width:768px) {
+    h1{
+        font-size: 28px;
+        width: 83vw;
+    }
+    .expImg img{
+        width: 100%;
+    }
+}
