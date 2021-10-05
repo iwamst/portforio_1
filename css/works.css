@@ -4,10 +4,24 @@
     margin: 0;
 }
 
+header{
+    text-align: center;
+    background-color: #f4f4f4;
+}
+header img{
+    margin: 15px 0 30px;
+    height: 28px;
+}
+
+
 body{
     background-color: #f4f4f4;
     color: #1c1d1f;
     font-size: 16px;
+}
+
+p{
+    line-height: 1.3em;
 }
 
 footer{
@@ -21,18 +35,12 @@ h1{
     width: 55vw;
     padding-bottom: .5em;
     border-bottom: 3px solid #8f3940;
-}
-header{
-    text-align: center;
-}
-header img{
-    margin: 10px 0;
-    height: 25px;
+    line-height: 1.5em;
 }
 
 #mainContents {
-    margin: 40px 5%;
-    background-color: #aba07b;
+    padding: 100px 5% 30px;
+    /* background-color: #aba07b; */
 }
 .h1div{
     border-bottom: #8f3940;
@@ -44,8 +52,6 @@ header img{
 
 .expImg{
     text-align: center;
-
-
 }
 .expImg img{
     width: 100%;
@@ -53,17 +59,40 @@ header img{
 .expTxt{
     margin: 30px 0;
 }
+
+.expInfo{
+    text-align: center;
+    margin-top: 20px;
+}
+.expInfo p{
+    margin-bottom: 1.4em;
+}
+
+
+.btnSection{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
 .backBtnDiv{
     text-align: center;
     margin-bottom: 30px;
+    background-color: #f4f4f4;
+    height: 48px;
+    width: 150px;
+    transition: ease 0.4s;
 }
 .fixed_btn
 {
-    border-radius: 20;
-  border: none;
-  bottom: 10px; 
-  right: 10px;
+    text-decoration: none;
   padding: 6px 40px;
+  border-radius: 10px;
+
+}
+.backBtnDiv :hover{
+    box-shadow: 2px 2px 6px #555;
+    filter: brightness(115%);
+    transition: ease 0.4s;
 }
 
 @media screen and (max-width:768px) {
