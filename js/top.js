@@ -1,0 +1,1 @@
+$('.topCts').hide().fadeIn(1000);

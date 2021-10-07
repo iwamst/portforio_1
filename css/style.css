@@ -1,82 +1,90 @@
 /* 共通スタイル */
+
 @charset "utf-8";
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
-body{
-    font-family:"Noto Sans Japanese",sans-serif;
+body {
+    font-family: "Noto Sans Japanese", sans-serif;
     background-color: #f4f4f4;
     color: #1c1d1f;
     font-size: 16px;
     line-height: 1.3em;
 }
 
-footer{
-    height:100px;
+footer {
+    height: 90px;
     background-color: #8f3940;
     color: #f4f4f4;
     text-align: center;
     font-size: 13px;
     padding: 25px 0;
-    bottom: 0; /*下に固定*/
-
+    bottom: 0;
 }
+
 .footerIcons{
-    width: 100%;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
-.icon{
-    width: 35px;
+
+.icon {
+    width: 36px;
     margin: 0px 15px;
+    transition: .3s;
+}
+.icon:hover{
+    transform: scale(1.05);
 }
 
 /* メニュー部分 */
-#nav{
 
+#nav {
     position: absolute;
-  top: 0;
-    right: -40%;
-    width: 40%;
+    top: 0;
+    right: -30%;
+    width: 30%;
     height: 100vh;
-    background: #8f3940e3;
+    background: #8f3940e1;
     transition: .6s;
-    z-index: 100;
-  }
-  #nav ul{
-    padding-top: 80px;
+    z-index: 100 !important;
+}
 
-  }
-  #nav ul li{
+#nav ul {
+    padding-top: 80px;
+}
+
+#nav ul li {
     list-style-type: none;
     font-size: 20px;
-    
-  }
-  #nav a{
+}
+
+#nav a {
     display: block;
     text-decoration: none;
     color: #f4f4f4;
     margin: 0 20px;
     padding: 25px;
     transition: .4s;
-    border-bottom:solid 1px #f4f4f4;
+    border-bottom: solid 1px #f4f4f4;
+}
 
-  }
-  #nav li a:hover{
+#nav li a:hover {
     color: #ffffff;
     background: #b64851;
-    border-bottom:solid 1px #f4f4f4;
+    border-bottom: solid 1px #f4f4f4;
+}
 
-  }
-  #hamburger {
-      z-index: 101;
+#hamburger {
+    z-index: 101;
     display: block;
     position: absolute;
     top: 20px;
@@ -85,8 +93,9 @@ footer{
     height: 44px;
     cursor: pointer;
     transition: .6s;
-  }
-  .inner_line {
+}
+
+.inner_line {
     display: block;
     position: absolute;
     right: 20%;
@@ -95,55 +104,66 @@ footer{
     background-color: #8f3940;
     transition: 1s;
     border-radius: 4px;
-  }
-  #line1 {
-    top: 0px;
-  }
-  #line2 {
-    top: 10px;
-  }
-  #line3 {
-    bottom: 20px;
-  }
+}
 
-  .in{
+#line1 {
+    top: 0px;
+}
+
+#line2 {
+    top: 10px;
+}
+
+#line3 {
+    bottom: 20px;
+}
+
+.in {
     transform: translateX(-100%);
-  }
-  .line_1,.line_2,.line_3{
+}
+
+.line_1, .line_2, .line_3 {
     background: #f4f4f4;
-  }
-  .line_1 {
- transform: rotate(-45deg);
+}
+
+.line_1 {
+    transform: rotate(-45deg);
     top: 10px !important;
 }
-  .line_2 {
+
+.line_2 {
     opacity: 0;
-  }
-  .line_3 {
+}
+
+.line_3 {
     transform: rotate(45deg);
     bottom: 30px !important;
+}
+
+/* フェードイン */
+.effect-fade {
+    opacity: 0;
+    transform: translate(0, 80px); 
+    transition: all 800ms; 
   }
-   
+  .effect-scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 
+/* SP対応 */
 
-@media screen and (max-width: 768px){
-    body{
+@media screen and (max-width: 768px) {
+    body {
         font-size: 16px;
         line-height: 1.5em;
     }
-    footer{
+    footer {
         font-size: 18px;
     }
-}
-
-
-
-
-/* SP対応 */
-@media screen and (max-width:768px) {
-    
-#nav {
-    width: 100%;
-    right: -100%;
-}
+    #nav {
+        width: 100%;
+        right: -100%;
+        text-align: center;
+    }
 }
